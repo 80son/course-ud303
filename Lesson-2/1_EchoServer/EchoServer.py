@@ -33,5 +33,5 @@ class EchoHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     server_address = ('', 8000)  # Serve on all addresses, port 8000.
-    httpd = HTTPServer(server_address, HelloHandler)
+    httpd = HTTPServer(server_address, EchoHandler)
     httpd.serve_forever()
