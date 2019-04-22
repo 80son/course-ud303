@@ -31,7 +31,7 @@ class MessageHandler(BaseHTTPRequestHandler):
         message = parse_qs(data)["message"][0]
         # Send the "message" field back as the response.
         self.send_response(200)
-        self.send_huader('Content-type', 'text/plain; charset=utf-8')
+        self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
         self.wfile.write(message.encode())
 
